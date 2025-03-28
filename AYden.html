@@ -28,6 +28,7 @@
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCRjr5Lj8c5L3gHwgw64tyzeyf45DlGqOTQ&s">
   <input type="email" placeholder="Name" id="Name">
  <input type="email" placeholder="Email" id="Email">
+  <input type="Lebron" placeholder="who is Lebron to you?" id="Lebron">
   <input type="submit" id="submit">
   <script type="module">
     // Import the functions you need from the SDKs you need
@@ -55,7 +56,8 @@
 
    const Name = document.querySelector("#Name") 
    const Email = document.querySelector("#Email")
-   document.querySelector('#submit').addEventListener('click', Submit)
+   const Lebron = document.querySelector("#Lebron")
+   document.querySelector('#submit').addEventListener('click',Submit)
   
   
   
@@ -65,10 +67,12 @@
 	  set(ref(db, timestamp), {
 		  Name: Name.value,
 	      email: Email.value,
+		  Lebron: Lebron.value,
 	  });
 
 	  Name.value = ""
 	  Email.value = ""
+	  Lebron.value = ""
 	}
 	
 	
